@@ -41,7 +41,7 @@
       background-size: 24px 24px;
     }
 
-    /* Lock outer viewport on desktop so Left Curriculum & Right Progress HUD stay 100% fixed while Center Workspace scrolls */
+    /* Lock outer viewport on desktop */
     @media (min-width: 1024px) {
       html, body {
         height: 100vh;
@@ -178,7 +178,7 @@
       animation: pulse-reticle 2.4s infinite steps(4);
     }
 
-    /* Hide scrollbar for horizontal pill strips on mobile */
+    /* Hide scrollbar on mobile */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -187,7 +187,7 @@
       scrollbar-width: none;
     }
 
-    /* Mobile responsive refinements */
+    /* Mobile responsiveness */
     @media (max-width: 639px) {
       .math-block {
         padding: 0.7rem 0.8rem;
@@ -267,7 +267,7 @@
   <!-- MOBILE DRAWER BACKDROP OVERLAY  -->
   <div id="mobile-drawer-backdrop" onclick="closeMobileDrawers()" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
 
-  <!-- MAIN BRUTALIST HUD WORKSPACE (FIXED HEIGHT ON DESKTOP SO SIDEBARS NEVER MOVE WITH CONTENT) -->
+  <!-- MAIN BRUTALIST HUD WORKSPACE  -->
   <div class="flex-1 min-h-0 max-w-[1680px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 lg:overflow-hidden hud-border-l hud-border-r bg-[#fcfbfa] relative">
 
     <!-- LEFT SIDEBAR: CURRICULUM -->
@@ -427,7 +427,7 @@
         <!-- Populated dynamically by renderActiveView() -->
       </div>
 
-      <!-- Do It Yourself (DIY) Practice Problems & Alongside Answers Section -->
+      <!-- Do It Yourself -->
       <section id="center-diy-section" class="p-3.5 sm:p-5 md:p-7 hud-border-t bg-[#fcfbfa]">
         <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
           <div>
@@ -471,7 +471,7 @@
 
     </main>
 
-    <!-- RIGHT WORKSPACE: PROGRESS HUD (HIDDEN BY DEFAULT; SLIDE-OVER DRAWER ON MOBILE, FIXED IN VIEWPORT ON DESKTOP) -->
+    <!-- RIGHT WORKSPACE: PROGRESS HUD  -->
     <aside id="right-progress-hud" class="hidden fixed lg:static inset-y-0 right-0 z-50 lg:z-auto w-[88vw] max-w-[360px] lg:w-auto lg:max-w-none lg:col-span-3 h-full lg:overflow-hidden hud-border-l flex-col justify-between bg-[#fcfbfa]">
       <!-- Top Fixed Header inside Progress HUD -->
       <div class="shrink-0">
@@ -4445,7 +4445,7 @@
       </div>
     `);
 
-    // Render Do It Yourself (DIY) Problems & Alongside Answers for this unit
+    // Render Do It Yourself (
     renderDiySection(ch);
 
     // Sync Interactive Visualizer to Active Module Context
@@ -5593,7 +5593,7 @@
 
     svg.innerHTML = svgHtml;
 
-    // Render Module 03 Telemetry Grid with Sequence-Specific Field Names
+    // Render Module 03 Telemetry Grid 
     if (gridEl) {
       gridEl.innerHTML = `
         <div class="p-3 border-2 border-[#ff4d00] bg-white">
